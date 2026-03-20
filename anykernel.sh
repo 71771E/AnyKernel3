@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=by belowzeroiq @ github
+kernel.string=by 71771E @ GitHub
 do.devicecheck=1
 do.modules=0
 do.systemless=0
@@ -36,9 +36,9 @@ no_magisk_check=1
 # Kernel selection function
 choose_kernel() {
   ui_print " "
-  ui_print "Kernel Version Selection:"
+  ui_print "Select kernel version:"
   ui_print " "
-  ui_print "  VOL + : non-KSU"
+  ui_print "  VOL + : No KSU"
   ui_print "  VOL - : KSU"
   ui_print " "
   ui_print "Waiting for input... "
