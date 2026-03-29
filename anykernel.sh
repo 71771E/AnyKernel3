@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=by belowzeroiq @ github
+kernel.string=by 71771E @ github
 do.devicecheck=1
 do.modules=0
 do.systemless=0
@@ -36,12 +36,12 @@ no_magisk_check=1
 # Kernel selection function
 choose_kernel() {
   ui_print " "
-  ui_print "Kernel Version Selection:"
+  ui_print "select kernel version:"
   ui_print " "
-  ui_print "  VOL + : non-KSU"
-  ui_print "  VOL - : KSU"
+  ui_print "  vol + : no-KSU"
+  ui_print "  vol - : KSU"
   ui_print " "
-  ui_print "Waiting for input... "
+  ui_print "waiting for input... "
   ui_print " "
   ui_print " "
 
@@ -65,26 +65,26 @@ if [ -f "$AKHOME/Image.ksu" ] && [ -f "$AKHOME/Image.noksu" ]; then
   case $? in
     1)
       ui_print " "
-      ui_print "Selected: non-KSU Kernel"
+      ui_print "selected: no-KSU kernel"
       mv -f "$AKHOME/Image.noksu" "$AKHOME/Image"
       ;;
     2)
       ui_print " "
-      ui_print "Selected: KSU Kernel"
+      ui_print "selected: KSU kernel"
       mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
       ;;
   esac
 elif [ -f "$AKHOME/Image" ]; then
   ui_print " "
-  ui_print "Single image kernel found, flashing it"
+  ui_print "single image kernel found, flashing"
   mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
 elif [ -f "$AKHOME/Image.ksu" ]; then
   ui_print " "
-  ui_print "Only KernelSU version found, flashing it"
+  ui_print "only KSU version found, flashing"
   mv -f "$AKHOME/Image.ksu" "$AKHOME/Image"
 elif [ -f "$AKHOME/Image.noksu" ]; then
   ui_print " "
-  ui_print "Only Standard version found, flashing it"
+  ui_print "only no-KSU version found, flashing"
   mv -f "$AKHOME/Image.noksu" "$AKHOME/Image"
 fi
 
